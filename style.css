@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; display: flex; justify-content: center; align-items: center; padding: 24px; font: 18px "Courier New", monospace; color: white; background: linear-gradient(135deg, #050509, #0b0b1f, #14002b); }
+.todo-container { width: min(100%, 800px); padding: 28px; border-radius: 20px; background: rgba(255,255,255,.08); box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+h1, h2 { margin-top: 0; }
+h1 { text-align: center; }
+.input-area { display: flex; gap: 10px; }
+#taskInput { flex: 1; min-width: 0; padding: 12px; border: 1px solid #ccc; border-radius: 7px; font: inherit; }
+button { padding: 12px 18px; border: 0; border-radius: 7px; color: white; background: #319f48; font: inherit; cursor: pointer; }
+button:hover { background: #267c38; }
+.task-counter,.completed-counter { display: inline-block; margin: 16px 16px 24px 0; color: #c9ffd2; }
+.task-section { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.pending-section { padding-right: 28px; border-right: 2px solid rgba(255,255,255,.35); }
+ul { margin: 0; padding: 0; list-style: none; }
+li { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; padding: 10px; border-radius: 7px; color: #111; background: #f9f9f9; }
+.task-text { flex: 1; overflow-wrap: anywhere; }
+.completed .task-text { color: #666; text-decoration: line-through; }
+.delete-button { padding: 7px 10px; background: #c73535; }
+.delete-button:hover { background: #992828; }
+@media (max-width: 600px) { body { align-items: flex-start; } .todo-container { padding: 20px; } .input-area { flex-direction: column; } .task-section { grid-template-columns: 1fr; } .pending-section { padding: 0 0 20px; border-right: 0; border-bottom: 2px solid rgba(255,255,255,.35); } }
+.reset-button{ padding: 12px 18px; border: 0; border-radius: 7px; color: white; background: #ff4d4d; font: inherit; cursor: pointer; margin-top: 10px; }
+.priority { padding: 4px 8px; border-radius: 12px; font-size: 12px; color: white; }
+.priority.high { background-color: #d63031; }
+.priority.medium { background-color: #f39c12; }
+.priority.low { background-color: #27ae60; }
+.clock-container { margin-top: 20px; text-align: center; }  
+.progress-container { margin-top: 20px; text-align: center; }
+.progress-bar { width: 100%; background-color: #ddd; border-radius: 5px; overflow: hidden; margin-top: 10px; }
+.progress { height: 20px; width: 0%; background-color: rgb(31, 229, 136)}

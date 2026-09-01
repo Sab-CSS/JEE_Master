@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="todo-container">
+    <h1>Todo List</h1>
+    <div class="input-area">
+      <input type="text" id="taskInput" placeholder="Enter your task" aria-label="New task">
+      <select id="priority" aria-label="Select priority">
+        <option value="high">High</option>
+        <option value="medium" selected>Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <button id="addButton" type="button">Add Task</button>
+    </div>
+    <div class="clock-container">
+      <h2>Current Date and Time</h2>
+      <p id="date">Loading date</p>
+      <p id="time">Loading time</p>
+    </div>
+    <div class="progress-bar">
+      <div id="progress" class="progress">0%</div>
+    </div>
+    <p id="taskCounter" class="task-counter">0 pending tasks</p>
+    <p id="completecounter" class="task-counter">0 completed tasks</p>
+    <button id="reset" type="button" class="reset-button">Reset Tasks</button>
+    <div class="task-section">
+      <section class="pending-section"><h2>Pending</h2><ul id="pendingTasks"></ul></section>
+      <section class="completed-section"><h2>Completed</h2><ul id="completedTasks"></ul></section>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
